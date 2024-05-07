@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Will m Portfolio</title>
+
+    </head>
+
+    <body>
+        <main>
+            <h1>THIS IS A TEST HEADING</h1>
+            <section id="Jumbotron">
+                <p>Hi! My name's William Macluskie!
+                    I'm a technology graduate at the Co-Operative Bank, and
+                    this is my portfolio website!
+                </p>
+
+                <li></li>
+
+            </section>
+
+
+        </main>
+    </body>
+
+    <footer>Created 2024</footer>
+
+</html>
