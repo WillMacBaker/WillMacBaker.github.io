@@ -13,6 +13,10 @@ p {
     
 }
 
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .top-body {
     margin-left: auto;
     margin-right: auto;
@@ -31,4 +35,5 @@ hr {
 
 footer {
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
