@@ -17,3 +17,7 @@ h1 {
     padding: 30px;
     background-color:thistle;
 }
+
+hr {
+    height: 3px;
+}
