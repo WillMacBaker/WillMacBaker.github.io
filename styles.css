@@ -2,6 +2,12 @@ h1 {
     text-align: center
 }
 
+fieldset{
+    border: 0;
+    padding: 1rem;
+}
+
+
 .main_heading, .Jumbotron {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
