@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio Survey</title>
+        <link rel="stylesheet" href="styles.css">       
+    </head>
+
+    <body>
+        <h1 id="title">Portfolio Website Survey</h1> 
+        <p id="description">Have an opinion about this website? Think it's terrible? Think it's...good? Send me your thoughts below!
+        </p>
+        <form method="post" id="survey-form"> 
+            <fieldset>
+                <label id="name-label" for ="name">What is your name?
+                    <input id="name" type="text" required/>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label id= "email-label" for="email">Enter your email (optional)
+                    <input id="email" type="email" required/>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label id="number-label" for="number">Your rating of my website (optional)
+                    <input id="number" type="number" min="0" max="0" />
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="dropdown">If you had an opinion about this website, choose an option below that best summarises it:
+                    <select id="dropdown">
+                        <option value="0">(select an option)</option>
+                        <option value="1">Eh, needs work</option>
+                        <option value="2">It's kinda mid</option>
+                        <option value="3">Pretty decent, actually!</option>
+                        <option value="4">This website is popping off, very nice</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Would you hire the person who made this website?
+                    <hr>
+                    <input name="hire-me" type="radio" class="inline"/>Yes
+                </label>
+                <label>
+                    <input name="hire-me" type="radio" class="inline" />Maybe
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>If you had to pick any sort of cake to eat, what would you choose?</label>
+                <label for="chocolatecake">
+                    <input class="inline" type="checkbox" value="0" name="chocolatecake"/>Chocolate cake
+                </label>
+                <label for="cheesecake">
+                    <input class="inline" type="checkbox" value="1" name="cheesecake"/>Cheesecake
+                </label>
+                <label for="fruitcake">
+                    <input class="inline" type="checkbox" value="2" name="fruitcake"/>Fruitcake
+                </label>
+                <label for="cake-suggestion">If you could choose one baked food to have right now, what woudld it be?:
+                    <textarea id="cake-suggestion" name="cake-suggestion" rows="3" cols="30" placeholder="Enter your choice of pie, cake or bread here!..."></textarea>
+                </label>
+                <input type="submit" value="Submit" />
+            </fieldset>
+            <fieldset>
+                
+            </fieldset>
+        </form>
+
+    </body>
+
+    <footer>    
+
+    </footer>
+
+
+
+</html>
