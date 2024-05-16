@@ -45,6 +45,7 @@ body {
   input, textarea {
     background-color: #11004C;
     border: 1px solid #11004C;
+    color: white;
     opacity: 1;
   }
   
@@ -68,6 +69,10 @@ body {
     border-bottom: none;
   }
   
+#dropdown{
+  color: white;
+  background-color: #11004C;
+}
 /* Registration form CSS */
 
 
