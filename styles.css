@@ -40,11 +40,7 @@ body {
     opacity: 1;
   }
   
-  input, textarea {
-    background-color: #11004C;
-    border: 1px solid #11004C;
-    opacity: 1;
-  }
+ 
   
   .inline{
     width: unset;
