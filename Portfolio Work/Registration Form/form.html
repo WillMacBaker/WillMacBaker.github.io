@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -15,20 +10,20 @@
         <h1 id="title">Portfolio Website Survey</h1> 
         <p id="description">Have an opinion about this website? Think it's terrible? Think it's...good? Send me your thoughts below!
         </p>
-        <form method="post" id="survey-form"> 
+        <form method="post" id="survey-foßrm"> 
             <fieldset>
                 <label id="name-label" for ="name">What is your name?
-                    <input id="name" type="text" required/>
+                    <input id="name" type="text" placeholder="Enter your full name" required/>
                 </label>
             </fieldset>
             <fieldset>
                 <label id= "email-label" for="email">Enter your email (optional)
-                    <input id="email" type="email" required/>
+                    <input id="email" type="email" placeholder="If desired, enter your email here, so I can get back to you!" required/>
                 </label>
             </fieldset>
             <fieldset>
                 <label id="number-label" for="number">Your rating of my website (optional)
-                    <input id="number" type="number" min="0" max="0" />
+                    <input id="number" type="number" placeholder="0-10" min="0" max="0" />
                 </label>
             </fieldset>
             <fieldset>
@@ -65,7 +60,7 @@
                 <label for="cake-suggestion">If you could choose one baked food to have right now, what woudld it be?:
                     <textarea id="cake-suggestion" name="cake-suggestion" rows="3" cols="30" placeholder="Enter your choice of pie, cake or bread here!..."></textarea>
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" id="submit" value="Submit" />
             </fieldset>
             <fieldset>
                 
