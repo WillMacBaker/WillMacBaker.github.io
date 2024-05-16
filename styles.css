@@ -6,11 +6,13 @@ body {
     color: f5f6f7;
     font-family: Sans-serif;
     font-size: 16px;
+    background-image: url("images/pexels-gdtography-277628-911738.jpg")
   }
   
   h1, p {
     margin: 1em auto;
     text-align: center;
+    background-color: rgba(255,255,255, .5);
   }
   
   form {
