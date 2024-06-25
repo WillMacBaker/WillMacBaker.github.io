@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./RPG.css">
+        <title>RPG Dragon Slayer</title>
+    </head>
+    <body>
+        <div id="game">
+          <div id="stats">
+            <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
+            <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
+            <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
+          </div>
+          <div id="controls">
+            <button id="button1">Go to store</button>
+            <button id="button2">Go to cave</button>
+            <button id="button3">Fight dragon</button>
+            <button id="button4" onclick="location.href='https://willmacbaker.github.io';">Quit</button>
+          </div>
+          <div id="monsterStats">
+            <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
+            <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
+          </div>
+          <div id="text">
+            Welcome to Dragon Repeller.  You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
+          </div>
+        </div>
+        <script src="./basicRPGScript.js"></script>
+    </body>
+    <footer>
+        <p id="explainer">This was worked on as part of an exercise on Freecodecamp!
+            This basic games uses javascript and some DOM elements to change
+            parts of the HTML page this is on when clicking on html buttons,
+            all tied together by referring to various ID's of elements on this page.
+        </p>
+    </footer>
+</html>
