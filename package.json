@@ -1,0 +1,14 @@
+{
+  "name": "willmacbaker.github.io",
+  "version": "1.0.0",
+  "description": "This repo is a portfolio of front-end development! It's currently under development, and will be worked on in the coming months! :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
