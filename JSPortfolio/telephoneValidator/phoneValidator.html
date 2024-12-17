@@ -27,10 +27,12 @@
     </div>
     <div id="submissionContainer">
         <p>Enter a Phone Number:</p>
-        <input required id="user-input" value="">
-        <button id="check-btn" type="submit" onclick=checkNameInput()>Check</button>
-        <button id="clear-btn" type="submit" onclick=>Clear</button>
-        <div id="results-div"></div>
+        <input required id="user-input" type="text" maxlength="20" value="">
+        <button id="check-btn" type="button">Check</button>
+        <button id="clear-btn" type="button">Clear</button>
+        <div id="results-div">
+            
+        </div>
     </div>
     </body>
     <script src="./phoneValidator.js"></script>

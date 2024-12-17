@@ -1,15 +1,24 @@
-const inputField = document.getElementById('user-input').value;
+const inputField = document.getElementById('user-input')
+const checkPhoneNumberButton = document.getElementById('check-btn')
+const clearButton = document.getElementById('clear-btn')
+const resultsDividerArea = document.getElementById('results-div')
 
 
-
-const checkNameInput = () => {
-    if (!inputField){
-        alert("Please provide a phone number")
+checkPhoneNumberButton.addEventListener("click", ()=>{
+    console.log(inputField.value)
+    if(inputField.value === ""){
+        alert("Please provide a phone number");
+        return;
     }
-}
+    else {
+        // RUN MAIN CHECKING CODE HERE, THIS IS WHERE MEAT OF FUNCTION OCCURS.
+    }
+}, false)
+
+clearButton.addEventListener("click", ()=> {
+    console.log("Clear button hit")
+    resultsDividerArea.value == ""
+}, false)
 
 
- // document.querySelector('#button').addEventListener('onclick', exit_alert);
-
- // Refer to https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/learn-localstorage-by-building-a-todo-app/step-68
- // for guidance and support
+// https://codepen.io/misou/pen/VwKKwjL
