@@ -3,6 +3,7 @@ const checkPhoneNumberButton = document.getElementById('check-btn')
 const clearButton = document.getElementById('clear-btn')
 const resultsDividerArea = document.getElementById('results-div')
 
+const phoneNumberRegex = /^(?:1\s*\(?(\d{3})\)?|)(\d{3})(\-|\s+)(\d{4})(\-|\s+)(\d{4})$/;
 
 checkPhoneNumberButton.addEventListener("click", ()=>{
     console.log(inputField.value)
