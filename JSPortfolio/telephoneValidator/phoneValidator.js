@@ -8,7 +8,14 @@ const resultsDividerArea = document.getElementById('results-div')
 const pNode = document.createElement("p")
 //^(?:1\s*\(?(\d{3})\)?|)(\d{3})(\-|\s+)(\d{4})(\-|\s+)(\d{4})$/;
 
-const phoneNumberRegex = /(\d)/
+
+const countryCode = '^(1\\s?)?';
+const areaCode = '(\\([0-9]{3}\\)|[0-9]{3})';
+const spacesDashes = '[\\s\\-]?';
+const phoneNumber = '[0-9]{3}[\\s\\-]?[0-9]{4}$';
+const phoneNumberRegex = new RegExp(
+    `${countryCode}${areaCode}${spacesDashes}${phoneNumber}`
+)
 
 checkPhoneNumberButton.addEventListener("click", ()=>{
     console.log(inputField.value)
@@ -21,7 +28,6 @@ checkPhoneNumberButton.addEventListener("click", ()=>{
         regexChecker(inputField.value)
     }
 }, false)
-
 
 // This function checks if the number value matches the regex rule.
 const regexChecker = (valueToCheck) => {
@@ -38,19 +44,16 @@ const regexChecker = (valueToCheck) => {
     }
 }
 
-
 const addElement = (flag, inputValue) => {
     const placeholderTextInvalid = `Invalid US number: ${inputValue}`
     const placeholderTextValid = `Valid US number: ${inputValue}`
-
     if (flag){
         pNode.textContent = placeholderTextValid
-        
-        resultsDividerArea.appendChild(document.createTextNode(pNode.textContent))//document.createTextNode(placeholderTextValid))
+        resultsDividerArea.appendChild(document.createTextNode(pNode.textContent))
     }
     else if (!flag){
         pNode.textContent = placeholderTextInvalid
-        resultsDividerArea.appendChild(document.createTextNode(pNode.textContent))//document.createTextNode(placeholderTextInvalid))
+        resultsDividerArea.appendChild(document.createTextNode(pNode.textContent))
     }
 }
 
