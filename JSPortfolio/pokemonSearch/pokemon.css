@@ -1,0 +1,64 @@
+/* CODE STOLEN FROM THE ROMAN SCRIPT, CUSTOMISE THIS */
+
+:root {
+    --white: #fff;
+    --light-grey: #f5f6f7;
+    --dark-grey: #0a0a23;
+    --yellow: #f1be32;
+    --golden-yellow: #feac32;
+  }
+  
+  /*For every element on the page, and before + after every element */
+  
+  /* *,
+  *::before, */
+  /* *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+  
+  div.results-div p {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  
+  body {
+    background-color: var(--light-grey);
+  }
+  
+  h1 {
+    color: var (--light-grey)
+  }
+  
+  .submissionContainer {
+    align-items: center;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input {
+    background-color: var(--dark-grey);
+    color: var(--white)
+  }
+  
+  #convert-btn {
+    background-color: var(--yellow);
+    border-color: var(--golden-yellow);
+  }
+  
+  .input-body {
+    background-color: var (--light-grey)
+  }
+
+  #taskExplainer {
+    background-color: var (var(--dark-grey));
+    border: 1px;
+  }
+
+  
