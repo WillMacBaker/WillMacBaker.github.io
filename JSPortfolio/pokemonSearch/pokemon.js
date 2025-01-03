@@ -11,6 +11,7 @@ const pokemonDefense = document.getElementById('defense')
 const pokemonSpecialAttack = document.getElementById('special-attack')
 const pokemonSpecialDefense = document.getElementById('special-defense')
 const pokemonSpeed = document.getElementById('speed')
+const pokemonSprite = document.getElementById('sprite-container')
 
 // Input fields
 const inputField = document.getElementById("search-input")
@@ -99,6 +100,7 @@ searchButton.addEventListener("click", () => {
             //shownPokemonContent.empty()
 
             // Update page elements
+            pokemonSprite.innerHTML = `<img id="sprite" src="${pokemon.sprites.front_default}">`
             pokemonName.innerHTML =   `<p>Pokemon Name: ${pokemon.name}</p>`
             pokemonId.innerHTML =     `<p>ID: ${pokemon.id}</p>`
             pokemonWeight.innerHTML = `<p>Weight: ${pokemon.weight}</p>`
