@@ -53,8 +53,8 @@ const parseInput = () => {
         console.log("input is of type integer?: " + hasNumber(inputField.value))
         // parse and clean string, respectively
 
-
-        return `https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${inputField.value}`
+        const cleanedInputValue = inputField.value.toLowerCase()
+        return `https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${cleanedInputValue}`
     }
     // If entered value is just an integer, simply append to end of url, return to be parsed
     else if (hasNumber(inputField.value) === true){
@@ -101,26 +101,29 @@ searchButton.addEventListener("click", () => {
 
             // Update page elements
             pokemonSprite.innerHTML = `<img id="sprite" src="${pokemon.sprites.front_default}">`
-            pokemonName.innerHTML =   `<p>Pokemon Name: ${pokemon.name}</p>`
-            pokemonId.innerHTML =     `<p>ID: ${pokemon.id}</p>`
-            pokemonWeight.innerHTML = `<p>Weight: ${pokemon.weight}</p>`
-            pokemonHeight.innerHTML = `<p>Height: ${pokemon.height}</p>`
+            pokemonName.innerText =   `${(pokemon.name).toUpperCase()}`
+            pokemonId.innerText =     `#${pokemon.id}`
+            pokemonWeight.innerText = `${pokemon.weight}`
+            pokemonHeight.innerText = `${pokemon.height}`
+
+            pokemonHP.innerHTML = `<p>${pokemon.stats[0].base_stat}</p>`;
+            pokemonAttack.innerHTML = `<p>${pokemon.stats[1].base_stat}</p>`;
+            pokemonDefense.innerHTML = `<p>${pokemon.stats[2].base_stat}</p>`;;
+            pokemonSpecialAttack.innerHTML = `<p>${pokemon.stats[3].base_stat}</p>`;;
+            pokemonSpecialDefense.innerHTML = `<p>${pokemon.stats[4].base_stat}</p>`;;
+            pokemonSpeed.innerHTML = `<p>${pokemon.stats[5].base_stat}</p>`;;
+
+            let pokemonTypeArray = pokemon.types
             
-            const {hp, attack, defense, 'special-attack': specialAttack, 'special-defense': specialDefense 
-            , speed} = pokemon.stats
+            pokemonTypeArray.forEach((item) => {
+                console.log(item.type.name)
+                //pokemonTypes.innerHTML+`<td>${item.type.name}</td>`
+            })
 
-            pokemonHP.innerHTML = `<p>HP: ${pokemon.stats[0].base_stat}</p>`;
-            pokemonAttack.innerHTML = `<p>Attack: ${pokemon.stats[1].base_stat}</p>`;
-            pokemonDefense.innerHTML = `<p>Defense: ${pokemon.stats[2].base_stat}</p>`;;
-            pokemonSpecialAttack.innerHTML = `<p>Sp. Attack: ${pokemon.stats[3].base_stat}</p>`;;
-            pokemonSpecialDefense.innerHTML = `<p>Sp. Defense: ${pokemon.stats[4].base_stat}</p>`;;
-            pokemonSpeed.innerHTML = `<p>Speed: ${pokemon.stats[5].base_stat}</p>`;;
-
-            let typesText = [];
-            pokemon.types.forEach(element => {
-                typesText += element.type.name
-            });
-            ;
+            
+                
+            
+            
             }
             getpokemondata(fetchRequestUrl)
         }
