@@ -115,10 +115,14 @@ searchButton.addEventListener("click", () => {
 
             let pokemonTypeArray = pokemon.types
             
+            let html = ``;
             pokemonTypeArray.forEach((item) => {
-                console.log(item.type.name)
-                //pokemonTypes.innerHTML+`<td>${item.type.name}</td>`
-            })
+                html += `<td>${item.type.name}</td>`;
+            });
+            console.log("html content is ", html)
+            console.log(pokemonAttack)
+            console.log(pokemonTypes)
+            pokemonTypes.innerHTML = html;
 
             
                 
