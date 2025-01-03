@@ -16,6 +16,9 @@ const pokemonSpeed = document.getElementById('speed')
 const inputField = document.getElementById("search-input")
 const searchButton = document.getElementById("search-button")
 
+// Page div that will be targeted to clear all children elements
+const shownPokemonContent = document.getElementById('page-contents')
+
 // Array that will store received pokemon data
 let pokemonDataArray = [];
 
@@ -91,14 +94,31 @@ searchButton.addEventListener("click", () => {
             }
             // Function that updates page elements based upon received json data back.
             const updatePage = (pokemon) => {
-                pokemon.forEach(({name, id, weight, height, types, stats, }) => {
-                    console.log("name:", name)
-                    pokemonName.innerText += name
-                    pokemonId.innerText += id
-                    pokemonWeight.innerText += weight
-                    pokemonHeight.innerText += height
-                    // UPDATE PAGE HERE.
-                });
+                
+            //Clear all elements from page first, before repopulating
+            //shownPokemonContent.empty()
+
+            // Update page elements
+            pokemonName.innerHTML =   `<p>Pokemon Name: ${pokemon.name}</p>`
+            pokemonId.innerHTML =     `<p>ID: ${pokemon.id}</p>`
+            pokemonWeight.innerHTML = `<p>Weight: ${pokemon.weight}</p>`
+            pokemonHeight.innerHTML = `<p>Height: ${pokemon.height}</p>`
+            
+            const {hp, attack, defense, 'special-attack': specialAttack, 'special-defense': specialDefense 
+            , speed} = pokemon.stats
+
+            pokemonHP.innerHTML = `<p>HP: ${pokemon.stats[0].base_stat}</p>`;
+            pokemonAttack.innerHTML = `<p>Attack: ${pokemon.stats[1].base_stat}</p>`;
+            pokemonDefense.innerHTML = `<p>Defense: ${pokemon.stats[2].base_stat}</p>`;;
+            pokemonSpecialAttack.innerHTML = `<p>Sp. Attack: ${pokemon.stats[3].base_stat}</p>`;;
+            pokemonSpecialDefense.innerHTML = `<p>Sp. Defense: ${pokemon.stats[4].base_stat}</p>`;;
+            pokemonSpeed.innerHTML = `<p>Speed: ${pokemon.stats[5].base_stat}</p>`;;
+
+            let typesText = [];
+            pokemon.types.forEach(element => {
+                typesText += element.type.name
+            });
+            ;
             }
             getpokemondata(fetchRequestUrl)
         }
