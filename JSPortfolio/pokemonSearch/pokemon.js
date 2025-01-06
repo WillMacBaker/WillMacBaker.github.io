@@ -42,7 +42,7 @@ const parseInput = () => {
     // to break request, don't process further, and throw out alert
     if (stringAndIntTest(inputField.value) === true){
         console.log(inputField.value + "contains string and int values!")
-        alert("Please enter either the pokemon id OR the name, not both")
+        alert("Pokémon not found")
         return false
     }
 
@@ -50,6 +50,9 @@ const parseInput = () => {
     // gender symbols
     else if (hasNumber(inputField.value) === false ){
         // treat entry as string and parse accordingly
+
+        // Add dash separation for strings with spaces
+        // account for ♀ or ♂ special characters!
         console.log("input is of type integer?: " + hasNumber(inputField.value))
         // parse and clean string, respectively
 
@@ -91,6 +94,7 @@ searchButton.addEventListener("click", () => {
             })
                 .catch((err) => {
                     console.error(`There was an error: ${err}`)
+                    alert("Pokémon not found")
                 });
             }
             // Function that updates page elements based upon received json data back.
@@ -123,10 +127,6 @@ searchButton.addEventListener("click", () => {
             console.log(pokemonAttack)
             console.log(pokemonTypes)
             pokemonTypes.innerHTML = html;
-
-            
-                
-            
             
             }
             getpokemondata(fetchRequestUrl)
