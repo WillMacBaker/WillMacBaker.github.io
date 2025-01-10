@@ -15,7 +15,6 @@ body {
   h1, p{
     margin: 1em auto;
     text-align: left;
-    background-color: red;
     max-width: 80%;
     min-width: 50%;
     margin: 0 auto;
